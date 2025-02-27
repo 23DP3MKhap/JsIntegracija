@@ -10,12 +10,9 @@ document.getElementById("fetchData").addEventListener("click", async function ()
     resultDiv.innerHTML = "Notiek datu ielāde...";
 
     try {
-        const response = await fetch(`https://api.opendota.com/api/players/${playerId}`);
+        const data = await (await fetch(`https://api.opendota.com/api/players/${playerId}`)).json();
 
-        const data = await response.json();
-
-        const matchesResponse = await fetch(`https://api.opendota.com/api/players/${playerId}/wl`);
-        const matchesData = await matchesResponse.json();
+        const matchesData = await (await fetch(`https://api.opendota.com/api/players/${playerId}/wl`)).json();
 
         const totalMatches = matchesData.win + matchesData.lose;
 
