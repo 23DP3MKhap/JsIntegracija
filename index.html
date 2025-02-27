@@ -3,44 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hero</title>
-    <link href ="src/css/main.css" rel="stylesheet">
+    <title>MatchCounter</title>
+    <link href="src/css/main.css" rel="stylesheet">
+    <script src="src/js/main.js" defer></script>
 </head>
 <body>
     <header>
         <nav>
             <div class="button"> 
-                <a href ="index.html">Hero</a>
-                <a href ="main.html">Main</a>
-                
-                </div>
-    
-                <img src="src/images/logo.png">
-    
-                <div class="button"> 
-                <a href ="Kontakti.html">Kontakti</a>
-                <a href ="About.html">About</a>
+                <a href="#hero">Hero</a>
+                <a href="#main">Main</a>
             </div>
-
+            <img src="src/images/logo.png">
+            <div class="button"> 
+                <a href="#about">About</a>
+                <a href="#kontakti">Kontakti</a>
+            </div>
         </nav>
     </header>
-  
-    <hero>
-        <img src = "src/images/logo.png">
+    
+    <section id="hero">
+        <img src="src/images/logo.png">
         <div class="hero_text">
-
-        <h1>MatchCounter - uzzināt, cik daudz laika esat iztērējis</h1>
-        <p>Uzziniet Dota 2 nospēlēto spēļu skaitu, nospiežot vienu pogu</p>
-        <p>ievadiet Steam32ID un iegūstiet rezultātu</p>
-        <p>Šīs vietnes izstrādei tika izmantota OpenDota API (26.0.0)</p>
+            <h1>MatchCounter - uzzināt, cik daudz laika esat iztērējis</h1>
+            <p>Uzziniet Dota 2 nospēlēto spēļu skaitu, nospiežot vienu pogu</p>
+            <p>ievadiet Steam32ID un iegūstiet rezultātu</p>
+            <p>Šīs vietnes izstrādei tika izmantota OpenDota API (26.0.0)</p>
         </div>
-    </hero>
-
+    </section>
+    
+    <section id="main">
+        <h1>Spēlēto spēļu skaits DOTA 2</h1>
+        <a>IDs: 1130363401, 1682677326, 134905278</a>
+        <input type="number" id="playerId" placeholder="Ievadiet spēlētāja ID">
+        <button id="fetchData">Iegūstiet datus</button>
+        <div id="result"></div>
+    </section>
+    
+    <section id="about">
+        <h1>Par mani</h1>
+        <p>Vietni izveidoja Mihails Hapilovs, lai iegūtu vērtējumus</p>
+        <p>Izmantojot šo vietni, tika izmantota opendota API (<a href="https://docs.opendota.com/">Saite</a>)</p>
+        <p>Uzvaras procentu formula: (uzvaras / kopējais spēļu skaits) * 100</p>
+        <img id="clock" src="src/images/clock.png">
+        <p>Pavadītais laiks ~160 minūtes</p>
+    </section>
+    
+    <section id="kontakti">
+        <h1>Kontakti</h1>
+        <ul>
+            <li>E-pasts: A231064MK@rvt.lv</li>
+            <li>Tel. num.: 22857643</li>
+            <li>Github: <a href="https://github.com/23DP3MKhap">23DP3MKhap</a></li>
+        </ul>
+    </section>
+    
     <footer>
         <span>Mikhail Khapilov©</span>
     </footer>
-
-
-    <script src="src/js/main.js"></script>
 </body>
 </html>
