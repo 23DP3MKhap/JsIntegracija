@@ -1,3 +1,9 @@
+fetch("https://catfact.ninja/fact")
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("catFact").innerText = data.fact;
+    })
+
 document.getElementById("fetchData").addEventListener("click", async function () {
     const playerId = document.getElementById("playerId").value.trim();
     const resultDiv = document.getElementById("result");
